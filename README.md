@@ -1,1 +1,0 @@
-# Paper_Educational_efficiency
