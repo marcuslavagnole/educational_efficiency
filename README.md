@@ -1,4 +1,4 @@
-Directory with R routines used in:
+Repository with R routines used in:
 **Implications of Brazilian institutional guidelines on educational efficiency**, Economía, the journal of LACEA, 21(1), 147-168, 2020.  
 
 - **MCMC_Code.R** : Main file containing the MCMC routine; 
