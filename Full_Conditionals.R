@@ -8,6 +8,7 @@ atualizarBETA<-function(b,B,y,x,u,sigma2){
   beta <- rmvnorm(1,media,sigma)
   return(beta)
 }
+
 # Full conditional distribution for sigma2
 atualizarSIGMA2<-function(c,C,y,x,u,beta,n,t){
   alpha1<- c + 0.5*n*t
@@ -17,6 +18,7 @@ atualizarSIGMA2<-function(c,C,y,x,u,beta,n,t){
   sigma2<-1/rgamma(1, alpha1, beta1)
   return(sigma2)
 }
+
 # Full conditional distribution for inefficiencies u
 atualizarU<-function(y,x,beta,alpha,z,theta,sigma2,tau2,n,t){
   v1   <- y - x%*%beta 
@@ -28,6 +30,7 @@ atualizarU<-function(y,x,beta,alpha,z,theta,sigma2,tau2,n,t){
   u    <- rtnorm(N,media,sd,lower=0,upper=Inf)
   return(u)
 }
+
 # Full conditional distribution for theta
 atualizarTHETA<-function(b,B,u,z,alpha,tau2){
   B.inv<- chol2inv(chol(B))
@@ -38,6 +41,7 @@ atualizarTHETA<-function(b,B,u,z,alpha,tau2){
   theta<- rmvnorm(1,media,sigma)
   return(theta)
 }
+
 # Full conditional distribution for tau2
 atualizarTAU2<-function(c,C,u,z,alpha,theta,n,t){
   alpha1<- c + 0.5*n*t
@@ -48,6 +52,7 @@ atualizarTAU2<-function(c,C,u,z,alpha,theta,n,t){
   tau2  <- 1/rgamma(1, alpha1, beta1)
   return(tau2)
 }
+
 # Full conditional distribution for the spatial effects alpha
 atualizarALPHA<-function(psi2,u,z,alpha,theta,tau2,m_W,m_aux,n,t){
   #v      <- u - z%*%theta 
@@ -64,6 +69,7 @@ atualizarALPHA<-function(psi2,u,z,alpha,theta,tau2,m_W,m_aux,n,t){
   alpha.final <- alpha.aux - mean(alpha.aux)
   return(alpha.final)
 }
+
 # Full conditional distribution for psi2
 atualizarPSI2<-function(c,C,m_W,alpha,n){
   m1 = (matrix(rep(alpha,n),n,n,byrow=TRUE) - matrix(rep(alpha,n),n,n))^2
