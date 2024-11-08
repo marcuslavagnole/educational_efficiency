@@ -1,5 +1,5 @@
 Repository with R routines used in:
-**Implications of Brazilian institutional guidelines on educational efficiency**, Economía, the journal of LACEA, 21(1), 147-168, 2020.  
+**Implications of Brazilian institutional guidelines on educational efficiency**, Economía - LACEA journal, 21(1), 147-168, 2020.  
 
 - **MCMC_Code.R** : Main file containing the MCMC routine; 
 - **Full_Conditionals.R** : Auxiliary file with all full conditional distributions;
