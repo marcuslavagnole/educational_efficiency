@@ -1,5 +1,8 @@
-Repository with R routines used in:
-**Implications of Brazilian institutional guidelines on educational efficiency**, Economía - LACEA journal, 21(1), 147-168, 2020.  
+In this repository, one can find the R routines used in the article [Implications of Brazilian institutional guidelines on educational efficiency](https://doi.org/10.1353/eco.2020.0009). It is a joint work with Kalinca L. Becker and Mario Jorge Mendonça, published in Economía - LACEA journal.
+
+The paper investigates the relationship between inefficiency in the Brazilian education system and municipal wealth, discussing how the current legislation possibly influences it. To that end, we apply a stochastic frontier model that accommodates covariates in the asymmetric error component to analyze the impact of per capita GDP on inefficiency. This methodology is applied to a data set on the Rio Grande do Sul municipalities for the years 2007 and 2017. The results indicate a positive effect, suggesting that richer municipalities are less efficient in allocating their resources.
+
+This repo includes:
 
 - **MCMC_Code.R** : Main file containing the MCMC routine; 
 - **Full_Conditionals.R** : Auxiliary file with all full conditional distributions;
