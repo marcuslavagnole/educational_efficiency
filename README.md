@@ -2,7 +2,7 @@ This repository provides the R routines from the article [Implications of Brazil
 
 The paper investigates the relationship between inefficiency in the Brazilian education system and municipal wealth, discussing how the current legislation possibly influences it. To that end, we apply a stochastic frontier model that accommodates covariates in the asymmetric error component to analyze the impact of per capita GDP on inefficiency. The methodology is applied to a data set on the Rio Grande do Sul municipalities for 2007 and 2017. The results indicate a positive effect, suggesting wealthier municipalities are less efficient in allocating resources.
 
-This repo includes:
+The repo includes:
 
 - **MCMC_Code.R** : Main file containing the MCMC routine; 
 - **Full_Conditionals.R** : Auxiliary file with all full conditional distributions;
