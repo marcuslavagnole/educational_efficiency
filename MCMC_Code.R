@@ -13,7 +13,7 @@ source("Full_Conditionals.R")
 load("dados.RData")
 load("W_RS.RData")
 
-# Define dependent and indepent variables, and covariates that affects the inefficiencies
+# Define dependent and independent variables, and covariates that affect the inefficiencies
 n <- length(base$ano)/2
 t <- length(unique(base$ano))
 dados         <- log(base$ideb)
@@ -29,7 +29,7 @@ for(l in 1:n){
   m_alpha[((l-1)*t+1):(l*t),l] <- 1 
 }
 
-# Define number of iterations to run
+# Define the number of iterations to run
 NN = 100000
 
 # Create auxiliary objects 
