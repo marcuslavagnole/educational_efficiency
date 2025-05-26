@@ -22,7 +22,6 @@ atualizarSIGMA2<-function(c,C,y,x,u,beta,n,t){
 # Full conditional distribution for inefficiencies u
 atualizarU<-function(y,x,beta,alpha,z,theta,sigma2,tau2,n,t){
   v1   <- y - x%*%beta 
-  #v2   <- alpha + z%*%theta 
   v2   <- alpha + z*theta 
   media<- (sigma2*v2 - tau2*v1)/(sigma2+tau2)
   sd   <- sqrt(tau2*sigma2/(sigma2+tau2))
@@ -45,7 +44,6 @@ atualizarTHETA<-function(b,B,u,z,alpha,tau2){
 # Full conditional distribution for tau2
 atualizarTAU2<-function(c,C,u,z,alpha,theta,n,t){
   alpha1<- c + 0.5*n*t
-  #v <- u-alpha-z%*%theta
   v <- u-alpha-z*theta
   v[is.na(v)] <- 0
   beta1 <- C + 0.5*(t(v)%*%v)
@@ -55,10 +53,8 @@ atualizarTAU2<-function(c,C,u,z,alpha,theta,n,t){
 
 # Full conditional distribution for the spatial effects alpha
 atualizarALPHA<-function(psi2,u,z,alpha,theta,tau2,m_W,m_aux,n,t){
-  #v      <- u - z%*%theta 
   v      <- u - z*theta 
   v[is.na(v)] <- 0
-  #n_front<- rowSums(m_W) 
   n_front<- rowSums(m_W,na.rm=TRUE) 
   alpha.aux <- alpha
   for (j in sample(1:n)){
