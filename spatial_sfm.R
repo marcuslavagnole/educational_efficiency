@@ -1,11 +1,11 @@
-#' Spatial stochastic frontier models for painel data
+#' Spatial stochastic frontier models for panel data
 #'
-#' This function estimates a Spatial stochastic frontier models following the
+#' This function estimates a Spatial stochastic frontier model following the
 #' Bayesian paradigm.
 #'
 #' @param y (nxt)-dimensional vector of responses.
 #' @param x Matrix - (nxt)x(p+1) - of predictors (include the intercept).
-#' @param x_u Matrix - (nxt)xq - of explainable variables for the inefficiencies.
+#' @param x_u Matrix - (nxt)xq - of explanatory variables for the inefficiencies.
 #' @param idobs (nxt)-dimensional vector that indicates the n units (categorical 
 #' numerical, from 1 to n).
 #' @param W Adjacency matrix.
@@ -151,3 +151,4 @@ atualizarPSI2<-function(c,C,m_W,alpha,n){
   psi2  <-1/rgamma(1, alpha1, beta1)
   return(psi2)
 }
+
