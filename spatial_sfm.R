@@ -4,6 +4,7 @@
 #' Bayesian paradigm.
 #'
 #' @param y (nxt)-dimensional vector of responses.
+#' y = (y_{11},y_{12},...,y_{1t},y_{21},y_{22},...,y_{2t},...,y_{n1},y_{n2},...,y_{nt})
 #' @param x Matrix - (nxt)x(p+1) - of predictors (include the intercept).
 #' @param x_u Matrix - (nxt)xq - of explanatory variables for the inefficiencies.
 #' @param idobs (nxt)-dimensional vector that indicates the n units (categorical 
@@ -151,4 +152,5 @@ atualizarPSI2<-function(c,C,m_W,alpha,n){
   psi2  <-1/rgamma(1, alpha1, beta1)
   return(psi2)
 }
+
 
